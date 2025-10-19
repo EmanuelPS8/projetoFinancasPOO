@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="bofe:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/bofe_jar</output-path>
+    <root id="archive" name="bofe.jar">
+      <element id="module-output" name="bofe" />
+    </root>
+  </artifact>
+</component>
