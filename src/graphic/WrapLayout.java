@@ -69,7 +69,6 @@ public class WrapLayout extends FlowLayout {
             dim.width += insets.left + insets.right + hgap * 2;
             dim.height += insets.top + insets.bottom + vgap * 2;
 
-            // garante que o preferredSize não fique menor que o viewport (evita barra horizontal)
             Container scrollPane = SwingUtilities.getAncestorOfClass(JScrollPane.class, target);
             if (scrollPane != null) {
                 int viewportWidth = ((JScrollPane) scrollPane).getViewport().getWidth();

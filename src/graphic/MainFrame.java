@@ -45,7 +45,7 @@ public class MainFrame extends JFrame {
         gbc.gridwidth = cols;
         gbc.weightx = 1;
         gbc.weighty = 1;
-        JPanel filler = new JPanel(); // vazio
+        JPanel filler = new JPanel();
         filler.setOpaque(false);
         grid.add(filler, gbc);
 

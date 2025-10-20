@@ -37,8 +37,8 @@ public class ValorOriginal extends JPanel {
 
         c.gridx = 0;
         c.gridy = 2;
-        c.gridwidth = 2; //
-        c.weightx = 1; //
+        c.gridwidth = 2;
+        c.weightx = 1;
         c.fill = GridBagConstraints.HORIZONTAL; //
         btnCalcular = new JButton("Calcular");
         add(btnCalcular, c);

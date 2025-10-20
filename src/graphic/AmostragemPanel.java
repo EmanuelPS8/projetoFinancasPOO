@@ -20,7 +20,6 @@ public class AmostragemPanel extends JPanel {
         c.anchor = GridBagConstraints.WEST;
 
 
-        //CAMPO 1
         c.gridx = 0;
         c.gridy = 0;
         add(new JLabel("Total (a) "), c);

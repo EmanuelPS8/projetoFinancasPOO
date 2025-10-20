@@ -10,7 +10,6 @@ public class AmostragemDoisPanel extends JPanel {
     private JButton btnCalcular;
 
     public AmostragemDoisPanel() {
-        // Título + padding interno para não colar nas bordas
         setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createTitledBorder("Amostragem 2 - Quando X representa de Y"),
                 BorderFactory.createEmptyBorder(8, 10, 10, 10)
@@ -21,7 +20,6 @@ public class AmostragemDoisPanel extends JPanel {
         c.insets = new Insets(4, 4, 4, 4);
         c.anchor = GridBagConstraints.WEST;
 
-        // CAMPO 1
         c.gridx = 0; c.gridy = 0;
         c.gridwidth = 1; c.weightx = 0; c.fill = GridBagConstraints.NONE;
         add(new JLabel("Total (a) "), c);
@@ -31,7 +29,6 @@ public class AmostragemDoisPanel extends JPanel {
         txtValorInicial = new JTextField(10);
         add(txtValorInicial, c);
 
-        // CAMPO 2
         c.gridx = 0; c.gridy = 1;
         c.weightx = 0; c.fill = GridBagConstraints.NONE;
         add(new JLabel("Parte (b) "), c);
@@ -41,18 +38,15 @@ public class AmostragemDoisPanel extends JPanel {
         txtDesconto = new JTextField(10);
         add(txtDesconto, c);
 
-        // BOTÃO
         c.gridx = 0; c.gridy = 2;
-        c.gridwidth = 2;           // ocupa as duas colunas
+        c.gridwidth = 2;
         c.weightx = 1;
         c.fill = GridBagConstraints.HORIZONTAL;
         btnCalcular = new JButton("Calcular");
         add(btnCalcular, c);
 
-        // sempre resetar gridwidth!
         c.gridwidth = 1;
 
-        // RESULTADO
         c.gridx = 0; c.gridy = 3;
         c.weightx = 0; c.fill = GridBagConstraints.NONE;
         add(new JLabel("Correnponde a % "), c);

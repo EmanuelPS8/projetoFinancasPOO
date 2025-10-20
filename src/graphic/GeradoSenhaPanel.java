@@ -33,7 +33,6 @@ public class GeradoSenhaPanel extends JPanel {
         c.insets = new Insets(6,6,6,6);
         c.fill = GridBagConstraints.HORIZONTAL;
 
-        // Checkboxes - linha 0
         cbMaiusculas = new JCheckBox("Maiúsculas", false);
         cbMinusculas = new JCheckBox("Minúsculas", false);
         cbNumeros = new JCheckBox("Números", false);
@@ -53,7 +52,6 @@ public class GeradoSenhaPanel extends JPanel {
         c.gridx = 3;
         add(cbSimbolos, c);
 
-        // Tamanho spinner + botão gerar - linha 1
         c.gridx = 0;
         c.gridy = 1;
         c.gridwidth = 1;
@@ -68,7 +66,6 @@ public class GeradoSenhaPanel extends JPanel {
         c.gridwidth = 2;
         add(btnGerar, c);
 
-        // Resultado label - linha 2
         c.gridx = 0;
         c.gridy = 2;
         c.gridwidth = 1;
@@ -81,7 +78,6 @@ public class GeradoSenhaPanel extends JPanel {
         add(txtResultado, c);
 
 
-        // Listeners
         btnGerar.addActionListener((ActionEvent e) -> gerarSenha());
 
     }
@@ -102,21 +98,17 @@ public class GeradoSenhaPanel extends JPanel {
             return;
         }
 
-        // Garante que todos os tipos selecionados apareçam pelo menos uma vez na senha
         StringBuilder senha = new StringBuilder(tamanho);
 
-        // adicionar um caractere de cada categoria selecionada (para garantir diversidade)
         if (cbMaiusculas.isSelected()) senha.append(randomCharFrom(MAIUS));
         if (cbMinusculas.isSelected()) senha.append(randomCharFrom(MINUS));
         if (cbNumeros.isSelected()) senha.append(randomCharFrom(NUM));
         if (cbSimbolos.isSelected()) senha.append(randomCharFrom(SIMB));
 
-        // preencher o restante aleatoriamente
         for (int i = senha.length(); i < tamanho; i++) {
             senha.append(randomCharFrom(pool.toString()));
         }
 
-        // embaralhar os caracteres para não deixar os garantidos sempre no começo
         String resultado = shuffleString(senha.toString());
         txtResultado.setText(resultado);
     }

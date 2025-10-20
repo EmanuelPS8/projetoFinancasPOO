@@ -17,7 +17,6 @@ public class RegraDeTres extends JPanel {
         c.fill = GridBagConstraints.HORIZONTAL;
 
 
-        //CAMPO 1
         c.gridx = 0;
         c.gridy = 0;
         add(new JLabel("a: "), c);
